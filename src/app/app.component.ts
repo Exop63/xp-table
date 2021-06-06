@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'xp-table';
+
+  data: any[] = [
+    {
+      name: 'Abdullah',
+      surname: 'Bağlan'
+    }
+  ];
+
+  add() {
+    this.data.push({
+      name:'Add',
+      surname:'Test'
+    })
+  }
 }
