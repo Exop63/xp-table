@@ -1,0 +1,66 @@
+/********** Table Stylese  **********/
+.xp-table {
+    width: 400px;
+    min-width: 768px !important;
+}
+
+/* Head */
+.xp-table-head {
+    // width: calc(100% - 1em);
+    background-color: #f9f9f9;
+    border-style: none !important;
+    font-size: 16px;
+}
+
+.xp-table-head-tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-style: none !important;
+    border-top: 1px solid #d5d5d57d !important;
+}
+.xp-table-head-td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    border-style: unset !important;
+
+}
+
+/* Head End*/
+
+/* Body */
+
+.xp-table-body {
+    display: block;
+    height: 500px;
+    overflow: auto;
+    font-size: 14px;
+}
+
+.xp-table-body-tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-top: .5px ridge #d5d5d57d !important;
+}
+.xp-table-body-td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    border: 0;
+
+    border-style: unset !important;
+    border:unset !important;
+    border-top: unset !important;
+}
+/* Body end*/
+@media only screen and (max-width: 768px) {
+    table {
+        width: 400px;
+        min-width: 1440px !important;
+    }
+}
+/********** Table Stylese  End  **********/

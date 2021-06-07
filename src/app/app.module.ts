@@ -5,6 +5,7 @@ import { XpTableComponent } from './components/xp-table/xp-table.component';
 import { XpColumnComponent } from './components/xp-column/xp-column.component';
 import { XpFilterComponent } from './components/xp-filter/xp-filter.component';
 import { from } from 'rxjs';
+import { XpLookupComponent } from './components/xp-lookup/xp-lookup.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { from } from 'rxjs';
     XpTableComponent,
     XpColumnComponent,
     XpFilterComponent,
+    XpLookupComponent,
 
   ],
   imports: [

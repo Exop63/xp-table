@@ -1,3 +1,4 @@
+import { typeofExpr } from '@angular/compiler/src/output/output_ast';
 import { AfterViewChecked, ChangeDetectionStrategy, Component, ContentChild, ContentChildren, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { IXpColumn, XpColumn } from 'src/app/models/xp-table.models';
 import { XpUtilityService } from 'src/app/services/xp-utility.service';
@@ -30,10 +31,16 @@ export class XpTableComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  getHeaderColumn(column: XpColumnComponent): string {
+    return column.caption ?? column.field as string;
+  }
+  getColumn(row: any, column: XpColumnComponent): string {
+    const value: any = row[column.field ?? ''];
+    if (column.xpLookup) {
+      return column.xpLookup.getValue(value);
+    }
 
-  getColumn(row: any, key: any | string): string {
-    const value: any = row[key];
-    return value ? value : key;
+    return value ? value : '';
   }
   getField(row: any, key: any | string): string {
     return row[key];

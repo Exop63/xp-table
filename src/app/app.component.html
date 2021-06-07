@@ -1,6 +1,13 @@
-<button (click)="add()"> Add</button>
-<xp-table [dataSource]="data">
-  <xp-filter [visiable]="true"></xp-filter>
-  <xp-column field="name"></xp-column>
-  <xp-column [caption]="'Soaydı'" field="surname"></xp-column>
-</xp-table>
+<!-- <button (click)="add()"> Add</button> -->
+<div class="mx-4 mt-3">
+  <xp-table [dataSource]="data">
+    <xp-filter [visiable]="false"></xp-filter>
+    <xp-column field="name" caption="Adı"></xp-column>
+    <xp-column [caption]="'Soaydı'" field="surname"></xp-column>
+    <xp-column [caption]="'Telefon No'" field="tel" textAliginBody="right"></xp-column>
+    <xp-column caption="Yaş" field="age" textAliginBody="right" [width]="1"></xp-column>
+    <xp-column caption="Durum" field="status">
+      <xp-lookup [dataSource]="statusLookup" valueExpr="id" displayExpr="text"></xp-lookup>
+    </xp-column>
+  </xp-table>
+</div>
