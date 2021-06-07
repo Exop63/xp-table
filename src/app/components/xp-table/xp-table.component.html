@@ -2,7 +2,7 @@
 
     <thead class="xp-table-head">
         <tr class="xp-table-head-tr">
-            <th class="xp-table-head-td " *ngFor="let column of xpColumns" data-toggle="tooltip" data-placement="top"
+            <th scope="col" class="xp-table-head-td " *ngFor="let column of xpColumns" data-toggle="tooltip" data-placement="top"
                 [title]="getHeaderColumn(column)">
                 {{getHeaderColumn(column) }}
 
@@ -12,8 +12,8 @@
     </thead>
     <tbody class="xp-table-body">
         <tr class="xp-table-body-tr" *ngFor="let row of dataSource">
-            <td class="xp-table-body-td" *ngFor="let column of xpColumns" data-toggle="tooltip" data-placement="top"
-                [title]="getHeaderColumn(column)">
+            <td scope="row" class="xp-table-body-td" *ngFor="let column of xpColumns" data-toggle="tooltip" data-placement="top"
+                [title]="getColumn(row,column)">
                 {{getColumn(row,column) }}
             </td>
         </tr>
